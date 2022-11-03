@@ -12,4 +12,6 @@
 
 ## Aula 02: Criando rotas e acessos ao banco conectando front e back, desenvolvimento web e construção da estrutura do banco de dados ✅
 
-## Aula 03: Desenvolvimento mobile - construção do layout usando NativeBase para gerar produtividade / integração com o back-end 👷‍
+## Aula 03: Desenvolvimento mobile - construção do layout usando NativeBase para gerar produtividade / integração com o back-end ✅
+
+## Aula 04: Conectando o app mobile com o back-end 👷‍
