@@ -14,4 +14,6 @@
 
 ## Aula 03: Desenvolvimento mobile - construção do layout usando NativeBase para gerar produtividade / integração com o back-end ✅
 
-## Aula 04: Conectando o app mobile com o back-end 👷‍
+## Aula 04: Conectando o app mobile com o back-end ✅
+
+## Aula 05: Funcionalidades do app mobile 👷‍
