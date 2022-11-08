@@ -20,13 +20,13 @@ export async function guessRoutes(fastify: FastifyInstance) {
         gameId: z.string(),
       });
 
-      const createGuessBoody = z.object({
+      const createGuessBody = z.object({
         firstTeamPoints: z.number(),
         secondTeamPoints: z.number(),
       });
 
       const { poolId, gameId } = createGuessParams.parse(request.params);
-      const { firstTeamPoints, secondTeamPoints } = createGuessBoody.parse(
+      const { firstTeamPoints, secondTeamPoints } = createGuessBody.parse(
         request.body
       );
 
@@ -57,7 +57,7 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
       if (guess) {
         return reply.status(400).send({
-          message: "Você já deu seu palpite para esse bolão!.",
+          message: "Você já deu seu palpite para esse bolão!",
         });
       }
 
@@ -73,11 +73,11 @@ export async function guessRoutes(fastify: FastifyInstance) {
         });
       }
 
-      if(game.date < new Date()){
-        return reply.status(400).send({
-          message: "Você não pode enviar palpites em jogos ocorridos."
-        })
-      }
+      // if(game.date < new Date()){
+      //   return reply.status(400).send({
+      //     message: "Você não pode enviar palpites em jogos ocorridos."
+      //   })
+      // }
 
       await prisma.guess.create({
         data: {

@@ -68,7 +68,7 @@ model Guess{
   participantId String
 
   participant Participant @relation(fields: [participantId], references: [id])
-  game Game @relation(fields: [gameId], references: [id])
+  game Game? @relation(fields: [gameId], references: [id])
 
   @@unique([participantId, gameId])
 }

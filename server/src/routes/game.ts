@@ -38,4 +38,22 @@ export async function gameRoutes(fastify: FastifyInstance) {
     })}
   }
   )
+
+  fastify.delete('/games/:id', {
+    onRequest: [authenticate]
+  }, async (request) => {
+    const getGameParams = z.object({
+      id: z.string()
+    });
+
+    const {id} = getGameParams.parse(request.params);
+
+    const deleteGame = await prisma.game.delete({
+      where: {
+        id
+      },
+    })
+
+  }
+  )
 }
